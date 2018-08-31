@@ -1,0 +1,48 @@
+
+.keys{
+ display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 0.5rem;
+  align-content: space-around;
+  justify-content: space-between;
+}
+
+
+
+.key {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  text-align:center;
+    font-size: 1.1rem;
+    transition: all 0.07s;  
+  color: white;
+  background: orange;
+  text-shadow: 0 0 .5rem black;
+  cursor: pointer;
+}
+
+.playing{
+  transform: scale(0.5); /* this is import to have for remove transitin function*/
+ background:yellow;
+}
+
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.0rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
+
+.note{
+  margin:50px auto;
+  text-align:center;
+  color:red;
+  background:yellow;
+  
+}
