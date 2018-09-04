@@ -1,0 +1,23 @@
+.main th{
+  background:lightblue;
+  padding:0 15px;
+  
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+a.arrow-down,a.arrow-up {
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.arrow-down::after {
+  content: '\25bc';
+  padding-left: 0.5em;
+}
+.arrow-up::after {
+  content: '\25b2';
+  padding-left: 0.5em;
+}
