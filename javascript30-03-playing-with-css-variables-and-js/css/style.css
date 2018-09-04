@@ -1,0 +1,28 @@
+:root{
+  --color:#99bfbe;
+  --spacing:10px;
+  --blur:10px;
+}
+
+.main{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  
+  
+}
+.header{
+  font-size: 20px;
+  color: var(--color);
+}
+ul li {
+  list-style:none;
+  display:inline-block;
+  margin:0 5px;
+}
+
+img{
+  padding: var(--spacing);
+  background: var(--color);
+  filter:blur(var(--blur));
+}
