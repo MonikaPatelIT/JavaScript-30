@@ -1,0 +1,11 @@
+html,
+body {
+  padding:0px;
+  margin: 0px;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
