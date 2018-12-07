@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript30 #12 Key sequence detection</title>
+
+<style>
+    body{
+     background-color:#0066ff;
+     color: white;   
+    }
+p{
+    display: flex;
+    font-weight: bold;
+    font-size: 3em;
+    text-transform: uppercase;
+    justify-content: center;
+
+}
+</style>
+</head>
+
+
+<body>
+    <p>KEEP</p>
+    <p>CALM</p>
+    <p>AND</p>
+    <p id="secret">...</p>
+    <p>ON</p>
+</body>
+
+<script>
+        const pressArray = [];
+        const secret = 'code';
+        let decode = document.querySelector('#secret');
+        
+        window.addEventListener('keyup', function(e){
+            console.log(e.key);
+            pressArray.push(e.key);
+            pressArray.splice(- secret.length - 1, pressArray.length - secret.length);
+            console.log(pressArray);
+            if(pressArray.join('').includes(secret))
+            {
+                decode.innerHTML= secret;
+            }
+        });
+    </script>
+</html>
