@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript30 #14 Object vs Array - Reference and copy</title>
+  
+  <script>
+      // variable string, number and boolean
+  let age = 100;
+
+  let age2 = age;
+
+  console.log(age, age2);
+  age = 200;
+
+  let name = "Monika";
+  let name2 = name;
+
+ console.log(name, name2);
+ name = 'megha';
+  console.log(name, name2);
+
+
+  // Array 
+
+  const players = ['a','b', 'c', 'd'];
+  const team = players
+  console.log(players, team);
+team[3] = 'e';
+console.log(players, team);
+
+// copy of the array wil not afect orirgnal array 
+const team2 = players.slice();
+
+
+// array and concat 
+
+const team3 = [].concat(players);
+
+// ES6 spread operator 
+
+const team4 = [...players];
+
+// array with form 
+
+const team5 = Array.from(players);
+
+const person = {
+    name : 'monika',
+    age:25
+}
+const captain = person;
+// will update the main object 
+captain.age = 30;
+
+
+// take a copy instead using object assigne
+
+let captain2 = Object.assign({}, person, {number: 50, age: 26});
+
+let captain3 = {...person};
+
+
+// object assign will go only one level down
+
+const myDetails = {
+    name : 'Monika',
+    social : {
+        twitter: '@monikad_eveloper',
+        linkedIn : 'monikapatel.it'
+
+    }
+}
+
+const developerDetails = Object.assign({}, myDetails);
+///copy using JSON Stingify
+
+const dev2 = JSON.parse(JSON.stringify(myDetails));
+
+
+
+  </script>
+  
+  
+</head>
+
+<body>
+</body>
+</html>
