@@ -1,0 +1,19 @@
+{
+  "name": "webcamfun",
+  "version": "1.0.0",
+  "description": "This is unreal webcam fun from the Javascrip 30 by Wes Bos",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "browser-sync start --server --files \"*.css, *.html, *.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Webcam"
+  ],
+  "author": "Monika Patel",
+  "license": "ISC"
+}
